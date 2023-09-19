@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Tela de Login</title>
+</head>
+<body>
+   <center> <div class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="button" id="login-button">Entrar</button>
+        </form>
+    </div>
+</center>
+
+    <script >
+              // Obtém a string de consulta (query string) da URL atual
+      const queryString = window.location.search;
+
+// Cria um objeto URLSearchParams para lidar com a query string
+const params = new URLSearchParams(queryString);
+
+// Obtém o valor do parâmetro 'nome'
+const nome = params.get("nome");
+
+// Obtém o valor do parâmetro 'idade'
+const idade = params.get("idade");
+
+console.log(`Nome: ${nome}`);
+console.log(`Idade: ${idade}`);
+
+
+
+    </script>
+</body>
+</html>
